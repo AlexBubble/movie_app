@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-areas:
+    "headerFavorites"
+    "moviesFavorites";
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.headerFavorites {
+  grid-area: "headerFavorites";
+}
+.errorFavorites {
+  grid-area: "moviesFavorites";
+}
+.moviesFavorites {
+  grid-area: "moviesFavorites";
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}

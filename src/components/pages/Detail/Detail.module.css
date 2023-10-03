@@ -1,0 +1,63 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  grid-template-rows: repeat(6, min-content);
+  grid-template-areas:
+    "headerDetail headerDetail"
+    "movieDetail movieTrailer"
+    "headerSimilar headerSimilar"
+    "moviesSimilar moviesSimilar"
+    "headerRecommended headerRecommended"
+    "moviesRecommended moviesRecommended";
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.headerDetail {
+  grid-area: "headerDetail";
+  margin-bottom: 5px;
+}
+.headerSimilar {
+  grid-area: "headerSimilar";
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.headerRecommended {
+  grid-area: "headerRecommended";
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.errorSimilar {
+  grid-area: "moviesSimilar";
+}
+.errorRecommended {
+  grid-area: "moviesRecommended";
+}
+.errorTrailer {
+  grid-area: "movieTrailer";
+  height: 100%;
+}
+.moviesSimilar {
+  grid-area: "moviesSimilar";
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.moviesRecommended {
+  grid-area: "moviesRecommended";
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-flow: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.movieTrailer {
+  grid-area: "movieTrailer";
+  height: 100%;
+}
